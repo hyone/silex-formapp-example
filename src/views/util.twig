@@ -1,0 +1,8 @@
+{% macro choice_text(value, choices) %}
+  {% for choice in choices %}
+    {% if choice.value == value %}
+      {{ choice.label }}
+    {% endif %}
+  {% endfor %}
+{% endmacro %}
+

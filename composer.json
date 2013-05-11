@@ -1,0 +1,40 @@
+{
+  "name": "silex-formapp-example",
+  "type": "project",
+  "authors": [
+    {
+      "name": "hyone",
+      "email": "hyone.development@gmail.com"
+    }
+  ],
+
+  "autoload": {
+    "psr-0": {
+      "Hyone\\FormExample": "src/"
+    }
+  },
+
+  "require": {
+    "silex/silex": "1.0.*@dev",
+    "symfony/form": "~2.2.1",
+    "symfony/validator": "~2.2.1",
+    "symfony/config": "~2.2.1",
+    "symfony/translation": "~2.2.1",
+    "symfony/locale": "~2.2.1",
+    "symfony/twig-bridge": "~2.2.1",
+    "swiftmailer/swiftmailer": ">=4.1.2,<4.2-dev",
+    "twig/twig": "1.13.*@dev"
+  },
+
+  "require-dev": {
+    "hyone/codeception-silex-module": "dev-master",
+    "codeception/codeception": "1.6.1"
+  },
+
+  "repositories": [
+      {
+          "type": "vcs",
+          "url": "https://github.com/hyone/codeception-silex-module.git"
+      }
+  ]
+}

@@ -1,0 +1,33 @@
+{% import "util.twig" as util %}
+
+{% extends "layout.html.twig" %}
+
+{% block title %}Confirmation of your input | {{ parent() }}{% endblock %}
+
+{% block content %}
+<h1>Confirmation of your input</h1>
+<ul>
+  {% for field in form %}
+    {% if field.vars.label %}
+    <li>
+      {{ field.vars.label }}:
+      {# display label name when radio button #}
+      {# {{ dump('choices' in field.vars|keys) }} #}
+      {% if 'choices' in field.vars|keys %}
+        {{ util.choice_text(data[field.vars.name], field.vars.choices) }}
+      {% else %}
+        {{ data[field.vars.name] }}
+      {% endif %}
+    </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<form action="{{ path('success') }}" method="get">
+  <div class="form-field">
+    <input type="submit" value="submit" />
+  </div>
+</form>
+<br />
+<div><a href=".">Modify your input</a></div>
+{% endblock %}

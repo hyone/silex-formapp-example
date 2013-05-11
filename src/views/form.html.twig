@@ -1,0 +1,31 @@
+{% extends "layout.html.twig" %}
+
+{% block title %}Application Form | {{ parent() }}{% endblock %}
+
+{% block content %}
+
+<h1>Application Form</h1>
+
+<form action="{{ path('top') }}" method="post" {{ form_enctype(form) }}>
+  {% for field in form %}
+    {% if field.vars.name != '_token' %}
+      <div class="form-field">
+        {{ form_label(field) }}
+        <div class="field-error">{{ form_errors(field) }}</div>
+        {{ form_widget(field) }}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  {#
+     Render token for CSRF.
+     If forget to add below, $form.isValid() always return false
+  #}
+  {{ form_rest(form) }}
+
+  <div class="form-field">
+    <input type="submit" name="submit" />
+  </div>
+</form>
+
+{% endblock %}

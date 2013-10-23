@@ -15,20 +15,20 @@
   },
 
   "require": {
-    "silex/silex": "1.0.*@dev",
-    "symfony/form": "~2.2.1",
-    "symfony/validator": "~2.2.1",
-    "symfony/config": "~2.2.1",
-    "symfony/translation": "~2.2.1",
-    "symfony/locale": "~2.2.1",
-    "symfony/twig-bridge": "~2.2.1",
-    "swiftmailer/swiftmailer": ">=4.1.2,<4.2-dev",
-    "twig/twig": "1.13.*@dev"
+    "silex/silex": "~1.1",
+    "symfony/form": "~2.3",
+    "symfony/validator": "~2.3",
+    "symfony/config": "~2.3",
+    "symfony/translation": "~2.3",
+    "symfony/locale": "~2.3",
+    "symfony/twig-bridge": "~2.3",
+    "swiftmailer/swiftmailer": "~5.0.2",
+    "twig/twig": "~1.14.1"
   },
 
   "require-dev": {
     "hyone/codeception-silex-module": "dev-master",
-    "codeception/codeception": "1.6.1"
+    "codeception/codeception": "~1.7.1"
   },
 
   "repositories": [
